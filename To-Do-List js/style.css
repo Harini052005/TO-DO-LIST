@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, hsl(243, 72%, 72%), hsl(243, 47%, 42%));
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 40px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(214, 221, 225);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.row #inputBox{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 15px;
+}
+.row button{
+    border: none;
+    outline: none;
+    padding: 18px 50px;
+    background-color: hsl(0, 74%, 74%);
+    border-radius: 30px;
+    color: aliceblue;
+    font-size: 20px;
+    cursor: pointer;
+}
+ul li{
+    list-style: none;
+    margin-left: 20px;
+    padding: 10px 8px 10px 50px;
+    font-size: 1.1rem;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li::before{
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(asset/task.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 5px;
+}
+ul li.checked{
+   color: hsl(0, 2%, 40%);
+   text-decoration: line-through;
+}
+ul li.checked::before{
+    content: " ";
+    background-image: url(asset/check-mark.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    color: hsl(0, 0%, 33%);
+    line-height: 30px;
+    text-align: center;
+}
+ul li span:hover{
+    background-color: hsl(0, 1%, 73%);
+    border-radius: 20px;
+}
